@@ -1,0 +1,125 @@
+    <!DOCTYPE html>
+    <html lang="tk">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Alexander VPN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+        body{background:#0f172a;color:#f8fafc;line-height:1.6}
+        header{background:#1e293b;padding:20px;position:sticky;top:0;z-index:1000;display:flex;justify-content:space-between;align-items:center}
+        header h1{font-size:1.5rem;color:#38bdf8}
+        nav a{margin-left:20px;color:#f8fafc;text-decoration:none;font-weight:600}
+        nav a:hover{color:#38bdf8}
+        .hero{height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:linear-gradient(to right,#0f172a,#1e293b)}
+        .hero h2{font-size:2.5rem;margin-bottom:15px;color:#38bdf8}
+        .hero p{max-width:600px;margin-bottom:25px;color:#e2e8f0}
+        .hero button{background:#38bdf8;color:#0f172a;font-weight:700;border:none;padding:12px 30px;border-radius:30px;font-size:1rem;cursor:pointer;transition:.3s}
+        .hero button:hover{background:#0ea5e9;color:white}
+        .plans{padding:60px 20px;max-width:1200px;margin:auto;text-align:center}
+        .plans h3{font-size:2rem;margin-bottom:40px;color:#38bdf8}
+        .plan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+        .card{background:#1e293b;border-radius:15px;padding:30px;box-shadow:0 5px 15px rgba(0,0,0,.2);transition:.3s}
+        .card:hover{transform:translateY(-5px)}
+        .card h4{font-size:1.5rem;margin-bottom:15px;color:#f8fafc}
+        .price{font-size:2rem;margin-bottom:15px;color:#38bdf8}
+        .card ul{text-align:left;margin-bottom:20px}
+        .card ul li{margin-bottom:8px}
+        .card button{width:100%;background:#38bdf8;color:#0f172a;font-weight:600;padding:10px;border:none;border-radius:10px;cursor:pointer;transition:.3s}
+        .card button:hover{background:#0ea5e9;color:white}
+        footer{background:#1e293b;text-align:center;padding:20px;margin-top:60px;color:#94a3b8;font-size:.9rem}
+    </style>
+    </head>
+    <body>
+
+    <header>
+        <h1>AlexanderVPN</h1>
+        <nav>
+        <a href="#plans">Planlar</a>
+        <a href="#features">Aýratynlyklar</a>
+        <a href="#contact">Habarlaşmak</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Howpsuz • Çalt • Çäksiz VPN</h2>
+        <p>Şahsyýetiňi gorap, internete çäksiz elýeterlik al. Çaltlyk we howpsuzlyk üçin niýetlenen iň gowy VPN planlaryny saýla.</p>
+        <button onclick="document.getElementById('plans').scrollIntoView({behavior:'smooth'})">Başla</button>
+    </section>
+
+    <section id="plans" class="plans">
+        <h3>Plan Saýla</h3>
+        <div class="plan-grid">
+        <div class="card">
+            <h4>Esasy</h4>
+            <p class="price">$1.2 / 3 gun</p>
+            <ul>
+            <li>✔ Çäkli trafik</li>
+            <li>✔ 1 enjam</li>
+            <li>✔ Ýokary tizlik</li>
+            </ul>
+            <button onclick="buy('Esasy')">Satyn al</button>
+        </div>
+        <div class="card">
+            <h4>Standart</h4>
+            <p class="price">$2.5 / hepde</p>
+            <ul>
+            <li>✔ Çäkli trafik</li>
+            <li>✔ 1 enjam</li>
+            <li>✔ Premium tizligi</li>
+            </ul>
+            <button onclick="buy('Standart')">Satyn al</button>
+        </div>
+        <div class="card">
+            <h4>Premium</h4>
+            <p class="price">$8.5 / aý</p>
+            <ul>
+            <li>✔ Çäkli trafik</li>
+            <li>✔ 1 enjam</li>
+            <li>✔ Örän ýokary tizlik</li>
+            <li>✔ 7/24 goldaw</li>
+            </ul>
+            <button onclick="buy('Premium')">Satyn al</button>
+        </div>
+        </div>
+    </section>
+
+    <section id="features" class="plans">
+        <h3>Näme üçin AlexanderVPN?</h3>
+        <div class="plan-grid">
+        <div class="card">
+            <h4>🌍 Ähli ýurtlarda serwerler</h4>
+            <p>Islendik ýerden ýokary tizlik bilen baglanyş.</p>
+        </div>
+        <div class="card">
+            <h4>🔒 Berk howpsuzlyk</h4>
+            <p>256-bit şifrleme internetde howpsuzlygyňy üpjün edýär.</p>
+        </div>
+        <div class="card">
+            <h4>⚡ Örän çalt</h4>
+            <p>Streaming we oýunlar üçin optimizirlenen serwerler.</p>
+        </div>
+        </div>
+    </section>
+
+    <section id="contact" class="plans">
+        <h3>Habarlaşmak</h3>
+        <p>Soraglaryň barmy? Telegram ýa-da e-poçta arkaly ýüz tut.</p>
+        <p>📩 E-poçta: <a href="mailto:support@alexandervpn.store" style="color:#38bdf8">support@alexandervpn.store</a></p>
+        <p>💬 Telegram: <a href="https://t.me/alexandervpn" target="_blank" style="color:#38bdf8">@alexandervpn</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 AlexanderVPN. Ähli hukuklar goralan.</p>
+    </footer>
+
+    <script>
+        function buy(plan){
+        alert(plan+" plan üçin töleg sahypasyna ugradylýar...");
+        // Ödeme sahypasyna gönükdirip bolýar (Stripe/PayPal/TG Bot)
+        // window.location.href = "https://siziň-ödeme-linkiňiz.com";
+        }
+    </script>
+    </body>
+    </html>
