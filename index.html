@@ -107,7 +107,7 @@
         <h3>Habarlaşmak</h3>
         <p>Soraglaryň barmy? Telegram ýa-da e-poçta arkaly ýüz tut.</p>
         <p>📩 E-poçta: <a href="mailto:support@alexandervpn.store" style="color:#38bdf8">support@alexandervpn.store</a></p>
-        <p>💬 Telegram: <a href="https://t.me/alexandervpn" target="_blank" style="color:#38bdf8">@alexandervpn</a></p>
+        <p>💬 Telegram: <a href="https://t.me/alexvpns" target="_blank" style="color:#38bdf8">@alexvpns</a></p>
     </section>
 
     <footer>
@@ -115,11 +115,28 @@
     </footer>
 
     <script>
-        function buy(plan){
-        alert(plan+" plan üçin töleg sahypasyna ugradylýar...");
-        // Ödeme sahypasyna gönükdirip bolýar (Stripe/PayPal/TG Bot)
-        // window.location.href = "https://siziň-ödeme-linkiňiz.com";
-        }
-    </script>
+function buy(plan){
+    let botLink = "";
+
+    switch(plan){
+        case "Esasy":
+            botLink = "https://t.me/basicvpnbot";
+            break;
+        case "Standart":
+            botLink = "https://t.me/standartvpnbot";
+            break;
+        case "Premium":
+            botLink = "https://t.me/premiumvpnbot";
+            break;
+        default:
+            alert("Geçersiz plan");
+            return;
+    }
+
+    // Kullanıcıyı ilgili Telegram botuna yönlendir
+    window.open(botLink, "_blank");
+}
+</script>
+
     </body>
     </html>
